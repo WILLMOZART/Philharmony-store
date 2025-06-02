@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://kit.fontawesome.com/9088cc6401.js" crossorigin="anonymous"></script>
+    <a href="Home Page.html" class="back-arrow">&#8592; Home</a>
+</head>
+<body>
+    <div class="container">
+        <h1>Shopping Cart</h1>
+        <div class="cart">
+            <div class="products">
+                <div class="product" data-price="350" data-discount="50">
+                    <img src="https://i.imgur.com/oYbYgGQ.jpg" alt="Chakki Fresh Atta">
+                    <div class="product-info">
+                        <h3 class="product-name">Chakki Fresh Atta</h3>
+                        <h4 class="product-price">Rs. 350</h4>
+                        <h4 class="product-offer">50% Off</h4>
+                        <p class="product-quantity">
+                            Qnt: <input type="number" value="1" min="1" class="quantity">
+                        </p>
+                        <p class="product-remove">
+                            <i class="fas fa-trash-alt"></i>
+                            <span class="remove">Remove</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product" data-price="10" data-discount="20">
+                    <img src="https://i.imgur.com/mHmTIxp.jpg" alt="Maggie">
+                    <div class="product-info">
+                        <h3 class="product-name">Maggie</h3>
+                        <h4 class="product-price">Rs. 10</h4>
+                        <h4 class="product-offer">20% Off</h4>
+                        <p class="product-quantity">
+                            Qnt: <input type="number" value="1" min="1" class="quantity">
+                        </p>
+                        <p class="product-remove">
+                            <i class="fas fa-trash-alt"></i>
+                            <span class="remove">Remove</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-total">
+                <p><span>Total Price</span> <span id="total-price">Rs. 0</span></p>
+                <p><span>No. of Items</span> <span id="total-items">0</span></p>
+                <p><span>You Save</span> <span id="total-savings">Rs. 0</span></p>
+                <a href="#" id="checkout-btn">Proceed to Checkout</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

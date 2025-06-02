@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Furniture</title>
+    <script src="https://kit.fontawesome.com/5471644867.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="Furniture.css">
+    <link rel="shortcut icon" type="image/jpg" href="./favicon.ico"/>
+    <a href="Home Page.html" class="back-arrow">&#8592; Home</a>
+</head>
+<body>
+    <header>
+        <h1>Furniture Store</h1>
+    </header>
+    <div class="container">
+        <section id="popular-product">
+            <div class="product-heading">
+                <h2 class='furniture-heading'>Furniture</h2>
+            </div>
+            <div class="product-container">
+                <div class="product-box">
+                    <img alt="Sofa Set" src="./images/sofa1.jpg">
+                    <strong>Sofa Set</strong>
+                    <span class="quantity">1 Piece</span>
+                    <span class="price">Ksh. 110</span>
+                    <a href="Shopping Cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </a>
+                    <a class="like-btn">
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <div class="product-box">
+                    <img alt="Sleeper Sofa" src="./images/sleeper sofa.jpg">
+                    <strong>Sleeper Sofa</strong>
+                    <span class="quantity">1 Piece</span>
+                    <span class="price">Ksh. 158</span>
+                    <a href="Shopping Cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </a>
+                    <a class="like-btn">
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <div class="product-box">
+                    <img alt="Shelf" src="./images/shelf.jpg">
+                    <strong>Shelf</strong>
+                    <span class="quantity">1 Piece</span>
+                    <span class="price">Ksh. 135</span>
+                    <a href="Shopping Cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </a>
+                    <a class="like-btn">
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <div class="product-box">
+                    <img alt="Mini Set" src="./images/store1.jpg">
+                    <strong>Mini Set</strong>
+                    <span class="quantity">1 Piece</span>
+                    <span class="price">Ksh. 157</span>
+                    <a href="Shopping Cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </a>
+                    <a class="like-btn">
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <div class="product-box">
+                    <img alt="Plastic Chair" src="./images/chair.jpg">
+                    <strong>Plastic Chair</strong>
+                    <span class="quantity">1 Piece</span>
+                    <span class="price">Ksh. 114</span>
+                    <a href="Shopping Cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </a>
+                    <a class="like-btn">
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+                <div class="product-box">
+                    <img alt="Bed" src="./images/bed.jpg">
+                    <strong>Bed</strong>
+                    <span class="quantity">6x6</span>
+                    <span class="price">Ksh. 115.92</span>
+                    <a href="Shopping Cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </a>
+                    <a class="like-btn">
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div> <div id="pagination">
+        <button id="prev-btn">Previous</button>
+        <span id="page-num">1</span>
+        <button id="next-btn">Next</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const productsPerPage = 12;
+            let currentPage = 1;
+    
+            function showPage(page) {
+                const products = document.querySelectorAll('.product-box');
+                const totalPages = Math.ceil(products.length / productsPerPage);
+    
+                if (page < 1) page = 1;
+                if (page > totalPages) page = totalPages;
+    
+                products.forEach((product, index) => {
+                    if (index >= (page - 1) * productsPerPage && index < page * productsPerPage) {
+                        product.style.display = "flex"; 
+                    } else {
+                        product.style.display = "none";
+                    }
+                });
+    
+                document.getElementById('page-num').innerText = page;
+                document.getElementById('prev-btn').disabled = page === 1;
+                document.getElementById('next-btn').disabled = page === totalPages;
+    
+                currentPage = page;
+            }
+    
+            function nextPage() {
+                showPage(currentPage + 1);
+            }
+    
+            function prevPage() {
+                showPage(currentPage - 1);
+            }
+    
+            document.getElementById("prev-btn").addEventListener("click", prevPage);
+            document.getElementById("next-btn").addEventListener("click", nextPage);
+    
+            showPage(1);
+        });
+        
+    </script>
+    <footer>
+        <p>&copy; 2025 Furniture Store. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

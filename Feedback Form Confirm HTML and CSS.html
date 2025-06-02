@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Confirmation</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link external CSS for maintainability -->
+    <link rel="shortcut icon" type="image/png" href="images/favicon.ico"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(120deg, #2980b9, #8e44ad);
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .box {
+            max-width: 90%;
+            width: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.2);
+        }
+        
+        .box h1 {
+            color: #fff;
+            font-size: 2rem;
+        }
+        
+        .box h5 {
+            color: #f8f9fa;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+        
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: #47c35a;
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #3aa34f;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Thank You!</h1>
+        <h5>Your feedback has been submitted. We appreciate your input and will use it to improve our website.</h5>
+        <a href="Home Page.html" class="btn">Return to Home</a>
+    </div>
+</body>
+</html>
